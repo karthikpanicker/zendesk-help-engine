@@ -1,0 +1,16 @@
+{
+  "comments": [
+    {
+      "id": 1001,
+      "author_id": 9001,
+      "public": true,
+      "body": "Hi, I need to take a half day off next Friday. How do I submit this in the system?"
+    },
+    {
+      "id": 1002,
+      "author_id": 8001,
+      "public": true,
+      "body": "To submit a half-day PTO request, go to HR Portal > Time Off > New Request. Select 'Half Day' from the Duration dropdown and specify AM or PM. Requests must be submitted at least 48 hours in advance."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "articles": [
+    {
+      "id": 201,
+      "title": "How to Submit PTO Requests",
+      "body": "<h2>Submitting a PTO Request</h2><p>Navigate to HR Portal &gt; Time Off &gt; New Request. Fill in the dates, select the type (Full Day or Half Day), and submit. Your manager will receive an email notification.</p><p>Half-day requests must specify AM or PM. All requests require 48 hours advance notice.</p>",
+      "label_names": ["workflow-question", "hr"],
+      "html_url": "https://yourcompany.zendesk.com/hc/articles/201"
+    },
+    {
+      "id": 202,
+      "title": "Expense Report Approval Workflow",
+      "body": "<h2>Expense Approval Process</h2><p>Submit expense reports through the Finance portal. Reports under $500 are auto-approved. Reports over $500 require manager + Finance team approval.</p><p>Attach all receipts as PDF. Processing takes 5-7 business days after final approval.</p>",
+      "label_names": ["process-clarification", "finance"],
+      "html_url": "https://yourcompany.zendesk.com/hc/articles/202"
+    },
+    {
+      "id": 203,
+      "title": "Software and System Access Requests",
+      "body": "<h2>Requesting Application Access</h2><p>All software access requests must go through the IT Portal. Select the application, choose permission level, and add your line manager as approver.</p><p>Provisioning SLA: 2 business days for standard applications, 5 days for privileged access.</p>",
+      "label_names": ["how-do-i", "it"],
+      "html_url": "https://yourcompany.zendesk.com/hc/articles/203"
+    }
+  ],
+  "next_page": null,
+  "count": 3
+}

@@ -1,0 +1,49 @@
+zendesk:
+  subdomain: "yourcompany"          # → https://yourcompany.zendesk.com
+  email: "admin@yourcompany.com"
+  api_token: "${ZENDESK_API_TOKEN}"
+
+anthropic:
+  api_key: "${ANTHROPIC_API_KEY}"
+  model: "claude-sonnet-4-6"
+
+embeddings:
+  # "local"  → BAAI/bge-base-en-v1.5 via sentence-transformers (zero cost, runs on-machine)
+  # "voyage" → Voyage AI voyage-3 API (better accuracy at scale, requires VOYAGE_API_KEY)
+  provider: "local"
+  local_model: "BAAI/bge-base-en-v1.5"
+  voyage_model: "voyage-3"
+  voyage_api_key: "${VOYAGE_API_KEY}"
+
+workflow:
+  # Tickets/chats with ANY of these Zendesk tags are ingested into the knowledge base.
+  # The sidebar panel only activates on tickets that carry at least one of these tags.
+  tags:
+    - "workflow-question"
+    - "process-clarification"
+    - "how-do-i"
+    - "procedure-help"
+
+ingestion:
+  batch_size: 50
+  chunk_size: 512    # approximate character count per chunk
+  chunk_overlap: 64
+  max_tickets: 2000
+  max_articles: 500
+
+rag:
+  top_k: 5           # number of chunks to retrieve from ChromaDB
+  min_score: 0.35    # cosine similarity threshold (0–1); lower = more results, less precise
+  suggestion_max_tokens: 300
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  cors_origins:
+    - "https://*.zendesk.com"
+    - "http://localhost:4567"   # ZAF zcli dev server
+    - "http://localhost:8000"
+
+chroma:
+  persist_directory: "./data/chroma"
+  collection_name: "workflow_kb"

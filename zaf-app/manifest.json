@@ -1,0 +1,25 @@
+{
+  "name": "Workflow Suggestion Engine",
+  "author": {
+    "name": "Support Ops",
+    "email": "ops@yourcompany.com"
+  },
+  "version": "1.0.0",
+  "frameworkVersion": "3.0",
+  "location": {
+    "support": {
+      "ticket_sidebar": {
+        "url": "assets/src/index.html"
+      }
+    }
+  },
+  "parameters": [
+    {
+      "name": "backendUrl",
+      "kind": "text",
+      "default": "http://localhost:8000/suggest",
+      "secure": false,
+      "description": "Full URL of the suggestion backend endpoint (e.g. https://your-backend.internal/suggest)"
+    }
+  ]
+}

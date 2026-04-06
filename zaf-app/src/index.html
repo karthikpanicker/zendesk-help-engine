@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workflow Suggestions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ZAF SDK — loaded from Zendesk CDN in production; zcli injects it locally -->
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+
+  <div id="app">
+    <!-- Inactive state -->
+    <div id="state-inactive" class="state hidden">
+      <div class="badge badge--inactive">
+        <span class="badge__dot"></span>
+        Workflow Assistant inactive
+      </div>
+      <p class="hint">Add a workflow tag to this ticket to activate suggestions.</p>
+    </div>
+
+    <!-- Loading state -->
+    <div id="state-loading" class="state hidden">
+      <div class="loading">
+        <div class="spinner"></div>
+        <span>Finding relevant workflow steps…</span>
+      </div>
+    </div>
+
+    <!-- Suggestion state -->
+    <div id="state-suggestion" class="state hidden">
+      <div class="badge badge--active">
+        <span class="badge__dot badge__dot--active"></span>
+        Workflow Assistant
+      </div>
+
+      <div class="suggestion-card" id="suggestion-card">
+        <div class="suggestion-text" id="suggestion-text"></div>
+
+        <details class="sources" id="sources-details">
+          <summary class="sources__toggle">Sources</summary>
+          <ul class="sources__list" id="sources-list"></ul>
+        </details>
+      </div>
+
+      <button class="btn-copy" id="btn-copy" title="Copy suggestion to clipboard">
+        Copy suggestion
+      </button>
+    </div>
+
+    <!-- Error state -->
+    <div id="state-error" class="state hidden">
+      <div class="error-msg" id="error-msg">Could not load suggestion.</div>
+    </div>
+  </div>
+
+  <script src="suggest.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

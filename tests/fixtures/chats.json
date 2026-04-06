@@ -1,0 +1,20 @@
+{
+  "chats": [
+    {
+      "id": "chat_301",
+      "tags": ["workflow-question"],
+      "transcript": [
+        {"type": "visitor", "message": "Hi, how do I reset my company password?"},
+        {"type": "agent", "message": "To reset your password, go to the IT Self-Service portal at portal.yourcompany.com and click 'Forgot Password'. You'll receive a reset link via your personal email on file."}
+      ]
+    },
+    {
+      "id": "chat_302",
+      "tags": ["procedure-help"],
+      "transcript": [
+        {"type": "visitor", "message": "What is the process to onboard a new vendor?"},
+        {"type": "agent", "message": "Vendor onboarding requires: 1) Submit a Vendor Request Form in Procurement portal, 2) Legal review (3-5 days), 3) Finance credit check, 4) Final approval from department head. Total process typically takes 2-3 weeks."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+/* Zendesk Garden design tokens */
+:root {
+  --color-primary: #1f73b7;
+  --color-primary-light: #e9f2fb;
+  --color-success: #038153;
+  --color-success-light: #edf8f4;
+  --color-inactive: #87929d;
+  --color-inactive-light: #f3f4f5;
+  --color-text: #2f3941;
+  --color-text-secondary: #68737d;
+  --color-border: #d8dcde;
+  --color-error: #cc3340;
+  --color-error-light: #fff0f1;
+  --radius: 4px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 13px;
+  color: var(--color-text);
+  background: #fff;
+  padding: 12px;
+  line-height: 1.5;
+}
+
+/* ── State visibility ── */
+.state { display: block; }
+.hidden { display: none !important; }
+
+/* ── Badge ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.badge--inactive { color: var(--color-inactive); }
+.badge--active   { color: var(--color-primary); }
+
+.badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-inactive);
+  flex-shrink: 0;
+}
+.badge__dot--active { background: var(--color-success); }
+
+/* ── Hint text ── */
+.hint {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+/* ── Loading spinner ── */
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-secondary);
+  padding: 8px 0;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Suggestion card ── */
+.suggestion-card {
+  background: var(--color-primary-light);
+  border: 1px solid #c2d7ee;
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+.suggestion-text {
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ── Sources collapsible ── */
+.sources {
+  margin-top: 8px;
+  border-top: 1px solid #c2d7ee;
+  padding-top: 6px;
+}
+
+.sources__toggle {
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--color-primary);
+  font-weight: 600;
+  list-style: none;
+  user-select: none;
+}
+
+.sources__toggle::-webkit-details-marker { display: none; }
+
+.sources__toggle::before {
+  content: '▶ ';
+  font-size: 9px;
+}
+
+details[open] .sources__toggle::before { content: '▼ '; }
+
+.sources__list {
+  margin-top: 6px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sources__list li a {
+  color: var(--color-primary);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.sources__list li a:hover { text-decoration: underline; }
+
+.source-type {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  margin-left: 4px;
+}
+
+/* ── Copy button ── */
+.btn-copy {
+  font-family: var(--font);
+  font-size: 12px;
+  color: var(--color-primary);
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-copy:hover {
+  background: var(--color-primary-light);
+}
+
+.btn-copy.copied {
+  color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+/* ── Error ── */
+.error-msg {
+  background: var(--color-error-light);
+  border: 1px solid #f5b8bc;
+  border-radius: var(--radius);
+  color: var(--color-error);
+  padding: 8px 12px;
+  font-size: 12px;
+}

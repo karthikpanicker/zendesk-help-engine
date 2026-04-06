@@ -1,0 +1,16 @@
+{
+  "comments": [
+    {
+      "id": 1003,
+      "author_id": 9002,
+      "public": true,
+      "body": "What is the approval process for expense reports over $500?"
+    },
+    {
+      "id": 1004,
+      "author_id": 8001,
+      "public": true,
+      "body": "For expense reports over $500, you need manager approval first, then Finance team sign-off. Submit through the Expenses portal, attach all receipts, and select 'Requires Approval' checkbox. Your manager will receive an email to review."
+    }
+  ]
+}

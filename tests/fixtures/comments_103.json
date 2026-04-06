@@ -1,0 +1,16 @@
+{
+  "comments": [
+    {
+      "id": 1005,
+      "author_id": 9003,
+      "public": true,
+      "body": "I need access to the Salesforce CRM. Who do I contact and what is the process?"
+    },
+    {
+      "id": 1006,
+      "author_id": 8002,
+      "public": true,
+      "body": "To request Salesforce access, submit an IT Access Request via the IT Portal. Select Salesforce from the application list, choose your required permission level, and add your manager as approver. Access is typically provisioned within 2 business days after manager approval."
+    }
+  ]
+}
